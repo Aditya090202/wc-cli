@@ -1,0 +1,23 @@
+import random
+
+def generate_sentence():
+    subjects = ["The cat", "A dog", "The bird", "A man", "The woman"]
+    verbs = ["jumps", "runs", "flies", "eats", "sleeps"]
+    objects = ["over the fence", "in the park", "under the tree", "on the roof", "in the house"]
+    
+    sentence = f"{random.choice(subjects)} {random.choice(verbs)} {random.choice(objects)}."
+    return sentence
+
+def generate_paragraph(num_sentences):
+    paragraph = "\n".join(generate_sentence() for _ in range(num_sentences))
+    return paragraph
+
+def generate_random_paragraphs(num_paragraphs, sentences_per_paragraph):
+    paragraphs = "\n\n".join(generate_paragraph(num_sentences=sentences_per_paragraph) for _ in range(num_paragraphs))
+    return paragraphs
+
+if __name__ == "__main__":
+    num_paragraphs = 3
+    sentences_per_paragraph = 5
+    random_paragraphs = generate_random_paragraphs(num_paragraphs, sentences_per_paragraph)
+    print(random_paragraphs)
