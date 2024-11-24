@@ -11,6 +11,7 @@ To start using this command on your local machine first run:
 
 ### Example usage
 
+> Input
 > `ccwc test.txt`
->
+> Output
 > `  7145  58164   342190  test.txt`
