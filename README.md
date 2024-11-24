@@ -21,26 +21,3 @@ Example 1
 > Output
 >
 > `  7145  58164   342190  test.txt`
-
-Example 2
-
-> Input
->
-> `ccwc test.txt random.txt oops.txt hello.txt`
->
-> Output
->
-> `7145  58164   342190  test.txt` > `23    85      938     random.txt` > `11    116     563     oops.txt` > `5     69      445     hello.txt` > `7184  58434   344136  total`
-
-Example 3
-
-> Input
->
-> `ccwc -l test.txt random.txt hello.txt`
->
-> Output
->
-> `7145  test.txt`
-> `23    random.txt`
-> `5     hello.txt`
-> `7173  total`
