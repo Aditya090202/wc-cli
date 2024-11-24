@@ -21,3 +21,11 @@ Example 1
 > Output
 >
 > `  7145  58164   342190  test.txt`
+
+### Upgrades
+
+My wc clone is still incomplete
+
+1. cannot take in standard input when no files are specified
+2. Issues with the way output is printed in terminal
+3. Cannot take in a '-L' argument that finds the lines with the most bytes

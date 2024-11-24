@@ -15,7 +15,6 @@ def open_file(filename, argument_type):
     # bytess = 0
     with open('examples/' + filename, 'r') as f:
         match argument_type:
-
             # this matches when the argument type passed in is '-c', which returns the bytes of the filename
             case "-c":
                 # I used a separate with open here as it uses a different mode than the parent with open above
