@@ -13,13 +13,13 @@ def open_file(filename, argument_type):
     words = 0
     # lines = 0
     # bytess = 0
-    with open(filename, 'r') as f:
+    with open('examples/' + filename, 'r') as f:
         match argument_type:
 
             # this matches when the argument type passed in is '-c', which returns the bytes of the filename
             case "-c":
                 # I used a separate with open here as it uses a different mode than the parent with open above
-                with open(filename, 'rb') as f_bytes:
+                with open('examples/' + filename, 'rb') as f_bytes:
                     #print number of bytes
                     # calling .read() on the IOWrapper returns the number of bytes(when printed it looks like a string)
                     bytess = f_bytes.read()
@@ -44,13 +44,13 @@ def open_file(filename, argument_type):
                 return f'  {words}\t{filename}', words
             case _:
                 #find the # of lines for this current file 
-                with open(filename, 'r') as f:
+                with open('examples/' + filename, 'r') as f:
                     lines = len(f.readlines())
                 #find the # of bytes for this current file
-                with open(filename, 'rb') as f:
+                with open('examples/' + filename, 'rb') as f:
                     bytess = len(f.read())
                 # find the # of words in this current file
-                with open(filename, 'r') as f:
+                with open('examples/' + filename, 'r') as f:
                     list_of_lines = f.readlines()
                     for line in list_of_lines:
                         words_list = line.split()
@@ -92,10 +92,8 @@ elif(sys.argv[1] == '-c'):
 elif(sys.argv[1] == '-m'):
     print(f'  {total_characters}\ttotal')
 else:
-    print(f'  {total_lines}\t{total_words}\t{total_bytes}\ttotal')
-
-
-
+    if(len(sys.argv)) > 2:
+        print(f'  {total_lines}\t{total_words}\t{total_bytes}\ttotal')
 
 
 # Step 2: Print out the lines, words and bytes for each file on a separate line
