@@ -5,6 +5,7 @@ The `wc` (word count) command in Linux is used to find out the number of lines, 
 ## Basic Usage of ccwc
 
 To start using this command on your local machine first run:
+
 `export PATH=$PATH:/path/to/executable/directory`
 
 > Add your own directory where the ccwc executable is located
@@ -16,4 +17,5 @@ To start using this command on your local machine first run:
 > `ccwc test.txt`
 >
 > Output
+>
 > `  7145  58164   342190  test.txt`
